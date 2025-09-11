@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- 記載番号：2 -->
-    <title>オリアプ（オリジナルアプリ）</title>
+    <title>オリジナルアプリ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css" />
   </head>
@@ -105,18 +105,18 @@
             <!-- 記載番号：11 -->
             <div class="p-work-outline__text">
               <p>
-                オリジナルアプリケーションとして、自身の趣味を共有をするSNSを開発しました。
+                「こどもすくすくカード」は、乳幼児～就学前までの“できた！”をカードで可視化する発達サポートアプリです。
                 <br>
-                主な機能は、ユーザー登録機能、および趣味のジャンルごとのタイムライン機能、タグ付け機能です。
+                年齢帯・カテゴリ・難易度で整理されたタスク（カード）を、スマホで見やすいグリッドで表示。各カードには「がんばり中」「できた！」ボタンがあり、日々の小さな前進を記録できます。
               </p>
               <p>
-                トップページにアクセスすると、様々な趣味のジャンルについて表示されています。それをクリックすると、そのジャンルにおけるタイムライン機能を閲覧することができます。
+                花丸の達成数に応じてメダル／トロフィー／スペシャル（クラウン・勲章・殿堂入り）の報酬が解放され、モチベーションを自然に後押しします。カードには保護者向けヒントと小さなイラストを載せ、行動のイメージが湧きやすい設計にしました。
               </p>
               <p>
-                ユーザー登録をすると、それらのタイムラインに自身の投稿をすることができます。画像を添付することや、YouTubeのリンクを埋め込むことができます。YouTubeの動画については、タイムライン上で再生することができます。
+                ユーザー登録後は子どもプロフィールを作成し、複数の子どもを切り替えて管理可能。
               </p>
               <p>
-                また、投稿をする際はタグ付け（ハッシュタグ）をすることができ、ハッシュタグをクリックすると同一のハッシュタグを持つ投稿のみを閲覧することができます。
+                未登録でも動作するおためしモード（端末ローカル保存）も備えています。
               </p>
             </div>
           </div>
@@ -130,33 +130,26 @@
               <!-- 記載番号：12 -->
               <div class="p-work-about__item-block">
                 <p>
-                  普段SNSを利用している中で、効率的に情報に接することができていないと課題に感じることがありました。
+                  育児の現場では、「今日はどんな“できた”を目指せばいい？」「今の月齢に合う刺激は？」が直感的に分かりづらいと感じていました。一般的なチェックリストは情報量が多く、日々の実行に落とし込みにくいことも課題でした。
                 </p>
                 <p>
-                  私はサッカー観戦が趣味で、特にイングランドのプレミアリーグの情報をSNSで収集します。しかし、サッカーのジャンルは広く、フォローをしている他のユーザーは他のリーグの情報や、サッカーとは関係のない情報を共有するためそれらの情報がノイズに感じることがありました。またハッシュタグのみでジャンルを管理すると、必ずしも全員がハッシュタグをつけるわけではないので、情報の網羅性に欠けると感じています。
-                </p>
-                <p>
-                  そこで、5ちゃんねるなどの掲示板の仕組みを参考に、テーマがカテゴライズされたSNSを作成したいと考えました。
+                  そこで、“今日取り組める具体アクション”がカードで一目で分かるUIにし、タップだけで進捗を残せるように考えました。さらに、達成体験をメダルやトロフィーなどのポジティブなフィードバックで包み、保護者にもお子さんにも前向きな循環が生まれるよう設計しました。
                 </p>
               </div>
             </li>
             <li class="p-work-about__item">
               <h3>開発で工夫したこと</h3>
               <div class="p-work-about__item-block p-work-about__item-block-2column">
-                <div class="p-work-about__item-block-pict obj-fit-img">
-                  <!-- images/02に配置した、記載内容を表す画像のパスを記載する -->
-                  <img src="../images/work/02/pict-work02-about-dammy.jpg">
-                </div>
                 <!-- 記載番号：13 -->
                 <div class="p-work-about__item-block-text">
                   <p>
-                    1つ目が本アプリケーションのポイントである趣味ジャンルのカテゴライズ機能です。カテゴリー管理にはancestryというRuby gemを用い、複数改装で管理できるようにしました。また、カテゴリーを各々が作成できる機能を設けました。しかし、これにはある課題が生じ、現在は機能を取り外しています。詳細は後述します。
+                    がんばり中／できた！の切り替えが軽快に反映するようにしました。未ログイン時はおためし保存で、まず触ってもらえる体験を重視しました。
                   </p>
                   <p>
-                    2つ目がタイムラインのUIです。スマートフォンブラウザでの利用を考え、「スマホで見やすい」「スマホでタップしやすい」をテーマにマークアップを行い実装しました。
+                    花丸達成数に応じたメダル／トロフィー／スペシャルのアンロックを実装。トースト通知とアイコンの演出で“達成の喜び”を明確化しました。
                   </p>
                   <p>
-                    いずれも、知人20名ほどに実際に利用してもらい、ユーザーヒアリングを行いながら改善を行っています。
+                    タスクが達成できないときにヒントを読むだけでは足りないと思い、ＡＩそうだんコーナーを設置しました。タスク達成だけでなく、育児相談もできるようにしました。
                   </p>
                 </div>
               </div>
@@ -164,22 +157,16 @@
             <li class="p-work-about__item">
               <h3>今後実装したいと思っていること</h3>
               <div class="p-work-about__item-block p-work-about__item-block-2column">
-                <div class="p-work-about__item-block-pict obj-fit-img">
-                  <!-- images/02に配置した、記載内容を表す画像のパスを記載する -->
-                  <img src="../images/work/02/pict-work02-about-dammy.jpg">
-                </div>
                 <!-- 記載番号：14 -->
                 <div class="p-work-about__item-block-text">
                   <p>
-                    ActiveAdminなどを用いて、管理機能を設けたいと考えています。理由は2つあります。
+                    年齢帯に応じたおすすめカードの通知、連続達成日数の表示など、続けやすさを支える仕組み。
                   </p>
                   <p>
-                    1つ目が、SNSというサービスの特性上、不適切な投稿を削除できるようにしておく必要があるためです。
+                    取り組みを家族と共有できる閲覧リンク。
                   </p>
                   <p>
-                    2つ目が、趣味ジャンルの修正追加を容易に行うためです。前述のとおり、ユーザーにカテゴリーを作成する機能を設けていましたが削除をしました。これは、ユーザーが好き勝手にカテゴリーを登録できてしまうと、重複の可能性があるためです。
-                    <br>
-                    そこで、ユーザーに要望フォームで修正追加したいカテゴリーを投稿をしてもらい、運営側で追加する仕組みを考えています。その運用を実現するために管理機能が必要であると考えています。
+                    問い合わせ欄から、メールをスムーズに遅れる機能。また、パスワード再発行ができる機能。
                   </p>
                 </div>
               </div>
@@ -195,10 +182,6 @@
           <div class="contents">
             <ul class="p-work-others__list">
               <li class="p-work-others__item">
-                <div class="p-work-others__item-pict">
-                  <!-- images/01に配置した、FURIMAの画像（PC版）のパスを記載する -->
-                  <a href="01.html" style="background-image:url('../images/work/01/pict-work01-firstview_pc.jpg');"></a>
-                </div>
                 <div class="p-work-others__item-text-block">
                   <!-- 記載番号：15 -->
                   <h3>FURIMA（フリマアプリ）</h3>
@@ -212,13 +195,13 @@
               <li class="p-work-others__item">
                 <div class="p-work-others__item-pict">
                   <!-- images/02に配置した、オリジナルアプリの画像（PC版）のパスを記載する -->
-                  <a href="02.html" style="background-image:url('../images/work/02/pict-work02-firstview_pc.jpg');"></a>
+                  <a href="02.html" style="background-image:url('../images/work/02/pict-work02-firstview_pc.png');"></a>
                 </div>
                 <div class="p-work-others__item-text-block">
                   <!-- 記載番号：17 -->
-                  <h3>HOBCHA（趣味共有SNS）</h3>
+                  <h3>こどもすくすくカード</h3>
                   <!-- 記載番号：18 -->
-                  <p>Ruby / Ruby on Rails / MySQL / GitHub / Heroku / Visual Studio Code / Trello</p>
+                  <p>HTML / CSS / JavaScript / Ruby / Ruby on Rails / SQLite3 / PostgreSQL / Render / GitHub / Visual Studio Code</p>
                 </div>
                 <div class="p-work-others__item-btn-block">
                   <a href="02.html" class="button">More</a>
@@ -230,7 +213,7 @@
       </section>
     </main>
     <!-- 記載番号：1 -->
-    <footer id="footer" class="footer"><p>&copy; Taro Tech.</p></footer>
+    <footer id="footer" class="footer"><p>&copy; Kawagoe Tatsuro.</p></footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../js/ofi.min.js"></script>
     <script type="text/javascript" src="../js/script.js"></script>
